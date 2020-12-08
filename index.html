@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>klxhunter</title>
+  </head>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: width 0.5s, height 1s;
+      transition-property: width, height, background;
+    }
+    .box:hover {
+      width: 400px;
+      height: 400px;
+      background-color: blue;
+    }
+  </style>
+  <body>
+    <h1>this is my klx site available (edit by klxhunter)</h1>
+    <!-- <div tyoe='button' id='bt' ></div> -->
+    <button type="button" id="bt">Toggle button</button>
+    <div class="box"></div>
+    <script>
+      import $ from jquery
+        $(document).ready(()=>[
+            $(`#bt`).click(()=>{
+                $(`.box`).toggle('fast')
+            })
+        ])
+    </script>
+  </body>
+</html>
